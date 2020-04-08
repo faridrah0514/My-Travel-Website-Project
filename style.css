@@ -1,0 +1,231 @@
+* {
+    font-family: 'Assistant';
+}
+
+body {
+    margin: 0;
+}
+
+/* 
+################
+#HEADER SECTION#
+################ 
+*/
+
+header {
+    background-color: #343a40;
+}
+
+header .container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+
+header .left {
+    display: flex;
+}
+
+.left h2, .left > h2 > a{
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    color: #a2a7aa;
+    text-decoration: none;
+}
+
+.left h2:hover, .left > h2 > a:hover {
+    background-color: #7e8286;
+    color: #2d3135;
+    cursor: pointer;
+}
+.right {
+    margin-left: auto;
+}
+
+.right input {
+    margin-top: 10px;
+    margin-right: 18px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 155px;
+    padding-left: 6px;
+    border-radius: 17px;
+    border: 0px;
+}
+
+input[class='disabled']:disabled {
+    background: lightgray;
+    color: #2d3135;
+}
+
+/* 
+#################
+#CONTENT SECTION#
+################# 
+*/
+
+.select {
+    display: flex;
+    margin-bottom: 20px;
+}
+ 
+.content > div > h3 {
+    margin: 6px;
+}
+
+
+#select-city {
+    margin-left: auto;
+    margin-right: 10px;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: #6c757d;
+    color: white;
+    width: 130px;
+    border-radius: 7px;
+    font-size: large;
+}
+
+.destination {
+    
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: space-between
+}
+
+.tujuan {
+    overflow: hidden;
+    height: 500px;
+    box-sizing: border-box;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+ }
+
+.display_none {
+    display: none;
+}
+
+.gambar {
+    height: 40%;
+}
+
+.monas {
+    background: url('img/Monas.jpg');
+}
+
+.yogya {
+    background: url('img/yogya.jpg');
+}
+
+.komodo {
+    background: url('img/komodo.jpg');
+}
+
+.raja_ampat {
+    background: url('img/raja_ampat.jpg');
+}
+
+.flores {
+    background: url('img/flores.jpg');
+}
+
+.deskripsi{
+    padding: 20px;
+    overflow: hidden;
+    height: 40%;
+    box-sizing: border-box;
+}
+
+h3 {
+    margin: 0;
+}
+
+.wishlist_div {
+    border-top: 1px solid #f4f4f4;
+    background: #f8f8f8;
+    height: 15%;
+    padding: 15px;
+}
+
+.wishlist_div > h3 {
+    margin-bottom: 10px;
+}
+
+.butt {
+    color: white;
+    border: none;
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.butt:hover{
+    cursor: pointer;
+}
+.see_more {
+    background: #343a40;
+    margin-right: 5px;
+}
+
+.wishlist {
+    background: #1a7bff;
+}
+
+/* 
+###########
+#Light box#
+########### 
+*/
+
+.white_layout {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(0,0,0,.8);
+    transition: 0.6s;
+}
+
+.white_layout > .tujuan {
+    background: white;
+    width: 20%;
+    height: 900px;
+    margin: auto;
+    margin-top: 1%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+
+#white_layout > .tujuan > .gambar {
+    border-radius: 5px;
+    height: 235px;
+    margin: 5px 10px 0 10px;
+}
+
+#white_layout > .tujuan >  .butt.wishlist {
+    margin: 10px 0 5px 10px;
+}
+
+#white_layout > .tujuan > .wishlist_div {
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+

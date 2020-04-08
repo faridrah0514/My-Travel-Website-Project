@@ -1,0 +1,313 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(64, 64, 139);
+    font-family: sans-serif;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+}
+header{
+    background: white;
+    overflow: auto;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    font-size: large;
+}
+
+hr{
+    margin-bottom: 30px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: 2px;
+}
+
+.left > p {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.right > ul > li {
+    list-style: none;
+    padding: 20px;
+}
+
+.right > ul > li > a{
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.right > ul > li:hover, .right > ul > li > a:hover{
+
+    background:  rgb(91, 91, 172);
+    color: white;
+    cursor: pointer;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.right > ul {
+    display: flex;
+}
+
+.content {
+    height: 700px;
+    background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    
+    background-size: 1900px 1000px; 
+    background-attachment: fixed;
+    background-position: 0px -300px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.photo_detail, .social_media {
+    width: 1100px;
+    height: 480px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.resume, .experience_detail {
+    width: 1100px;
+    margin: auto;
+    /* box-sizing: border-box; */
+}
+
+.resume > h3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+.photo, .detail {
+    width: 50%;
+    padding: 20px;
+}
+
+.photo{
+    background: url('https://images.unsplash.com/photo-1558203728-00f45181dd84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
+    background-size: 200%;
+    background-position: -90px -100px;
+    background-repeat: no-repeat;
+}
+
+.detail{
+    background: white;
+}
+
+.social_media_resume {
+    position: relative;
+    padding-top: 150px;
+    height: 600px;
+    text-align: center;
+    background: rgb(241, 241, 241);
+    box-sizing: border-box;
+}
+.social_media{
+    top: 0;
+    background:  rgb(64, 64, 139);
+    height: fit-content;
+    justify-content: center;
+}
+
+.social_media > ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.social_media > ul >li {
+    padding: 20px;
+    color: white;
+}
+
+.experience{
+    position: relative;
+    text-align: center;
+}
+
+.experience > h3 {
+    padding: 30px;
+    font-size: 30px;
+}
+.experience_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.year, .company {
+    width: 40%;
+}
+
+.year {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.company {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: left;
+}
+.dots {
+    padding: 10px;
+}
+
+.satu {
+    height: 180px;
+    display: flex;
+}
+
+.year > .satu > * {
+    margin: auto 5px auto auto;
+    text-align: right;
+}
+
+.company > .satu > * {
+    margin: auto auto auto 5px;
+}
+
+.purwadhika {
+    background: url('img/purwadhika.jpg');
+    background-position: 0 25px;
+}
+.dot {
+    width: 180px;
+    height: 180px;
+    filter: grayscale();
+    background-repeat: no-repeat;
+    background-size: 180px;
+}
+
+.hacktiv {
+    background: url('img/hacktiv.png');
+    background-size: 400px;
+    background-position: -108px -20px;
+}
+
+.huawei {
+    background: url('img/Huawei.jpg');
+    background-size: 130px;
+    background-repeat: no-repeat;
+    background-position: 33px 10px;
+}
+.niometrics {
+    background: url('img/niometrics.png');
+    background-size: 100px;
+    background-position: 45px;
+    background-repeat: no-repeat;
+}
+.psi {
+    background: url('img/psi.jpg');
+    background-size: 130px;
+    background-position: 35px 55px;
+    background-repeat: no-repeat;
+}
+
+.itb {
+    background: url('img/itb.png');
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: 30px;
+}
+
+.oneconnect {
+    background: url('img/OneConnect.jpg');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: 25px;
+}
+
+.allot {
+    background: url('img/allot.jpg');
+    background-position: 25px;
+    background-size: 150px;
+    background-repeat: no-repeat;
+}
+
+.resume > div > h3 {
+    color: white;
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact_me {
+    background: rgb(241, 241, 241);
+}
+
+.resume.contact_me > h3 {
+    padding: 40px 0 40px 0 ;
+    margin: 0;
+}
+
+.email_id{
+    display: flex;
+}
+.email, .id{
+    width: 50%;
+    height: 500px;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+    display: flex;
+}
+
+.email > div, .id > div {
+    margin: auto;
+    width: 70%;
+}
+
+#form > div > #name, #form > div > #email {
+    width: 49%;
+}
+
+#form > div > * {
+    display: block;
+    width: 100%;
+    border: none;
+    padding-left: 8px;
+    box-sizing: border-box;
+    /* height: 15px; */
+    margin: 10px 0 10px 0;
+}
+
+#submit {
+    background:  rgb(64, 64, 139);
+    color: white;
+    padding: 10px;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+.data_diri{
+    text-align: left;
+}
+
+.social_media_footer > ul{
+    list-style: none;
+    display: flex;
+}
+
+.social_media_footer > ul > li {
+    margin: 10px;
+}

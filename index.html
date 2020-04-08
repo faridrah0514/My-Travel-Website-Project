@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
+    <title>Travel Guide</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="left">
+                <h2>Home</h2>
+                <h2><a href="/Project Module01/about/index.html" target="_blank">About</a></h2>
+            </div>
+            <div class="right">
+                <input type="text" placeholder="Search" onchange="search(this)" on>
+                <input type="text" id="disabled" value="Total Price: Rp 0" disabled>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <h1>My Travel Guide</h1>
+        <div class="select">
+            <h3>All Places</h3>
+            <select id="select-city" >
+                <option value="">Select City</option>
+                <option value="Jakarta">Yogyakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Bali">Bali</option>
+            </select>
+        </div>
+        <div class="destination">
+            <div class="tujuan">
+                <div class="gambar yogya" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Yogyakarta</h3>
+                    <p>Yogyakarta Yogyakarta Yogyakarta Yogyakarta Yogyakarta Yogyakarta Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minus commodi voluptatibus quia, eligendi exercitationem ex eos odio excepturi fugiat in deleniti sequi, maiores non qui quas laudantium voluptas sed incidunt. Voluptatibus reprehenderit suscipit consequatur quaerat, vero nisi pariatur totam sunt fugiat quisquam quo id quod. Eaque dolor sed molestias dolorem minus labore odit, sunt rerum temporibus iusto accusamus quia tempora porro placeat aliquam magnam earum fugit consequuntur dicta quasi culpa alias debitis quis! Veritatis ipsum quod sequi suscipit animi officia nemo velit alias, reiciendis similique ratione a excepturi dolores perspiciatis nobis autem impedit ex cupiditate atque rem explicabo tenetur.
+                    </p> 
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 500.000</h3>
+                    <button class="butt see_more yogya" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar monas" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Monumen Nasional</h3>
+                    <p>Monumen Nasional Monumen Nasional Monumen Nasional Monumen Nasional Monumen Nasional Monumen Nasional Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 1.000.000</h3>
+                    <button class="butt see_more monas" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar komodo">
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Komodo</h3>
+                    <p>Komodo Komodo Komodo Komodo Komodo Komodo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 1.200.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar raja_ampat">
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Raja Ampat</h3>
+                    <p>Raja Ampat Raja Ampat Raja Ampat Raja Ampat Raja Ampat Raja Ampat Raja Ampat Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 1.400.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar flores">
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Flores</h3>
+                    <p>Flores Flores Flores Flores Flores Flores FloresLorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 1.600.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="white_layout display_none" id="white_layout">
+        <div class="tujuan">
+            <button class="butt wishlist" onclick="add_to_wishlist_2(this)">Add to Wishlist</button>
+            <div class="gambar">
+            </div>
+            <div class="deskripsi"> 
+                <h3>{{ dummy text }}</h3>
+                <p>{{ dummy description }}</p> 
+            </div>
+            <div class="wishlist_div">
+                <h3>{{ dummy expense }}</h3>
+                <button class="butt see_more" onclick="keluar()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
