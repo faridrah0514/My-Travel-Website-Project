@@ -98,7 +98,7 @@ input[class='disabled']:disabled {
 .destination {
     
     display: grid;
-    grid-template-columns: 32% 32% 32%;
+    grid-template-columns: 318px 318px 318px;
     justify-content: space-between
 }
 
@@ -109,6 +109,7 @@ input[class='disabled']:disabled {
     border: 1px solid #f4f4f4;
     border-radius: 5px;
     margin-bottom: 30px;
+    width: 318px;
 
  }
 
@@ -116,34 +117,17 @@ input[class='disabled']:disabled {
     display: none;
 }
 
-.gambar {
-    height: 40%;
-}
 
-.monas {
-    background: url('img/Monas.jpg');
-}
 
-.yogya {
-    background: url('img/yogya.jpg');
-}
-
-.komodo {
-    background: url('img/komodo.jpg');
-}
-
-.raja_ampat {
-    background: url('img/raja_ampat.jpg');
-}
-
-.flores {
-    background: url('img/flores.jpg');
-}
+/* .gambar {
+    background-size: 318px 175px;
+    height: 175px;
+} */
 
 .deskripsi{
     padding: 20px;
     overflow: hidden;
-    height: 40%;
+    height: 45%;
     box-sizing: border-box;
 }
 
@@ -197,24 +181,31 @@ h3 {
     position: fixed;
     background: rgba(0,0,0,.8);
     transition: 0.6s;
+    overflow: auto;
 }
 
 .white_layout > .tujuan {
     background: white;
-    width: 20%;
-    height: 900px;
+    width: 500px;
+    height: 940px;
     margin: auto;
     margin-top: 1%;
     box-sizing: border-box;
     position: relative;
+    overflow: auto;
 }
 
+.white_layout > .tujuan > .deskripsi {
+    overflow: auto;
+}
 
 
 #white_layout > .tujuan > .gambar {
     border-radius: 5px;
-    height: 235px;
+    height: 350px;
+    /* width: ; */
     margin: 5px 10px 0 10px;
+    background-size: 478px 350px;
 }
 
 #white_layout > .tujuan >  .butt.wishlist {
@@ -229,3 +220,65 @@ h3 {
     left: 0;
 }
 
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 950px){
+    body {
+        /* background: blue; */
+    }
+
+    .destination {
+        display: flex;
+        flex-wrap: wrap;
+        /* grid-template-columns: 318px 318px; */
+        justify-content: space-around;
+    }
+    header .container, .content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:650px){
+    .destination {
+        /* text-align: center; */
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content > h1 {
+        text-align: center;
+    }
+    .select {
+        text-align: center;
+        display: block;
+    }
+
+    header .container{
+        display: block;
+    }
+
+    header .left {
+        text-align: center;
+        display: block;
+    }
+
+    .left > h2 > a {
+        padding: 0;
+    }
+
+    .right input {
+        text-align: center;
+        width: 90%;
+
+        margin-left: 20px;
+        /* margin-right: 1px; */
+    }
+
+    #see_more, .white_layout {
+        display: none;
+    }
+
+}

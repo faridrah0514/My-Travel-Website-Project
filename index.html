@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/pictures.css">
     <link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
     <title>Travel Guide</title>
 </head>
@@ -15,7 +16,7 @@
                 <h2><a href="about/index.html" target="_blank">About</a></h2>
             </div>
             <div class="right">
-                <input type="text" placeholder="Search" onchange="search(this)" on>
+                <input type="text" placeholder="Search" onchange="search()" id='search_category'on>
                 <input type="text" id="disabled" value="Total Price: Rp 0" disabled>
             </div>
         </div>
@@ -24,82 +25,336 @@
         <h1>My Travel Guide</h1>
         <div class="select">
             <h3>All Places</h3>
-            <select id="select-city" >
+            <select id="select-city" onchange="search()">
                 <option value="">Select City</option>
-                <option value="Jakarta">Yogyakarta</option>
+                <option value="Jogyakarta">Jogyakarta</option>
                 <option value="Bandung">Bandung</option>
                 <option value="Bali">Bali</option>
             </select>
         </div>
+        <div class="found"></div>
         <div class="destination">
             <div class="tujuan">
-                <div class="gambar yogya" >
+                <div class="gambar jogja-museum-batik" >
                 </div>
                 <div class="deskripsi"> 
-                    <h3>Yogyakarta</h3>
-                    <p>Yogyakarta Yogyakarta Yogyakarta Yogyakarta Yogyakarta Yogyakarta Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!
+                    <h3>Museum Batik</h3>
+                    <h4>Museum in Jogyakarta</h4>
+                    <p>Yogyakarta Batik Museum is the first batik museum in Yogyakarta founded on the initiative of Hadi Nugroho, the owner of the museum. This private museum is located on Jalan Dr. Sutomo  
+                    </p>
+                    <p class="hidden">
+                        The building is managed by a husband and wife Dewi and Hadi Nugroho. On May 12, 1977 , the museum was inaugurated by the Regional Office of P&K Special Region of Yogyakarta. This museum inhabits an area of ​​400 m2 and is also used as a residence for its owner.
 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minus commodi voluptatibus quia, eligendi exercitationem ex eos odio excepturi fugiat in deleniti sequi, maiores non qui quas laudantium voluptas sed incidunt. Voluptatibus reprehenderit suscipit consequatur quaerat, vero nisi pariatur totam sunt fugiat quisquam quo id quod. Eaque dolor sed molestias dolorem minus labore odit, sunt rerum temporibus iusto accusamus quia tempora porro placeat aliquam magnam earum fugit consequuntur dicta quasi culpa alias debitis quis! Veritatis ipsum quod sequi suscipit animi officia nemo velit alias, reiciendis similique ratione a excepturi dolores perspiciatis nobis autem impedit ex cupiditate atque rem explicabo tenetur.
-                    </p> 
+                        In 2000 , the museum received an award from MURI for the work of 'Biggest Embroidery', batik measuring 90 x 400 cm 2 . Then in 2001 , the museum was awarded again by MURI as the initiator of the establishment of the first Embroidery Museum in Indonesia.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 200.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar jogja-museum-wayang" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Museum Wayang</h3>
+                    <h4>Museum in Jogyakarta</h4>
+                    <p>Kekayon Puppet Museum is a museum about puppets in the city of Yogyakarta , precisely on Jl. Raya Yogya-Wonosari Km. 7, approximately 1 km from Jl. Majapahit (East Ring Road). 
+                    </p>
+                    <p class="hidden">
+                        The museum which was founded in 1990 has a collection of various puppets and masks and displays the history of puppets which were introduced from the 6th century to the 20th century. Puppets in this museum are made of leather , wood , cloth , and paper . 
+
+                        Similar to the Wayang museum in Jakarta , this museum has several types of puppets, such as: Wayang Purwa , Wayang Madya (telling the post- Baratayuda era), Wayang Thengul , Wayang Klithik (narrating Damarwulan and Minakjinggo ), Wayang Beber , Wayang Gedhog (Dewi story). Candrakirana ), wayang Suluh (about the history of Indonesia's independence struggle), and others. In connection with the Purwa puppet, this museum has several posters depicting the war strategy used in the Baratayuda war between the Pandava and Kurawa families, namely: the Sapit Urang strategy and the Elephant strategy.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 150.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar jogja-candi-prambanan" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Candi Prambanan</h3>
+                    <h4>Candi in Jogyakarta</h4>
+                    <p>'Prambanan' or 'Rara Jonggrang' is a 9th-century Hindu temple compound in Special Region of Yogyakarta, Indonesia.
+                    </p>
+                    <p class="hidden">
+                        Dedicated to the Trimūrti, the expression of God as the Creator (Brahma), the Preserver (Vishnu) and the Transformer (Shiva). 
+
+                        The temple compound is located approximately 17 kilometres (11 mi) northeast of the city of Yogyakarta on the boundary between Central Java and Yogyakarta provinces. 
+
+                        The temple compound, a UNESCO World Heritage Site, is the largest Hindu temple site in Indonesia and the second-largest in Southeast Asia. It is characterized by its tall and pointed architecture, typical of Hindu architecture, and by the towering 47-metre-high (154 ft) central building inside a large complex of individual temples. Prambanan attracts many visitors from around the world.
+                        </p>
                 </div>
                 <div class="wishlist_div">
                     <h3>Total expenses: Rp 500.000</h3>
-                    <button class="butt see_more yogya" onclick="see_more(this)" id="see_more">See More</button>
-                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
-                </div>
-            </div>
-            <div class="tujuan">
-                <div class="gambar monas" >
-                </div>
-                <div class="deskripsi"> 
-                    <h3>Monumen Nasional</h3>
-                    <p>Monumen Nasional Monumen Nasional Monumen Nasional Monumen Nasional Monumen Nasional Monumen Nasional Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
-                </div>
-                <div class="wishlist_div">
-                    <h3>Total expenses: Rp 1.000.000</h3>
-                    <button class="butt see_more monas" onclick="see_more(this)" id="see_more">See More</button>
-                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
-                </div>
-            </div>
-            <div class="tujuan">
-                <div class="gambar komodo">
-                </div>
-                <div class="deskripsi"> 
-                    <h3>Komodo</h3>
-                    <p>Komodo Komodo Komodo Komodo Komodo Komodo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
-                </div>
-                <div class="wishlist_div">
-                    <h3>Total expenses: Rp 1.200.000</h3>
                     <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
                     <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
                 </div>
             </div>
             <div class="tujuan">
-                <div class="gambar raja_ampat">
+                <div class="gambar jogja-candi-borobudur" >
                 </div>
                 <div class="deskripsi"> 
-                    <h3>Raja Ampat</h3>
-                    <p>Raja Ampat Raja Ampat Raja Ampat Raja Ampat Raja Ampat Raja Ampat Raja Ampat Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
+                    <h3>Candi Borobudur</h3>
+                    <h4>Candi in Jogyakarta</h4>
+                    <p>Borobudur, or Barabudur is a 9th-century Mahayana Buddhist temple in Magelang Regency, not far from the town of Muntilan, in Central Java, Indonesia. 
+                    </p>
+                    <p class="hidden">
+                        It is the world's largest Buddhist temple. The temple consists of nine stacked platforms, six square and three circular, topped by a central dome. It is decorated with 2,672 relief panels and 504 Buddha statues. The central dome is surrounded by 72 Buddha statues, each seated inside a perforated stupa.
+
+                        Built in the 9th century during the reign of the Sailendra Dynasty, the temple design follows Javanese Buddhist architecture, which blends the Indonesian indigenous cult of ancestor worship and the Buddhist concept of attaining Nirvana. The temple demonstrates the influences of Gupta art that reflects India's influence on the region, yet there are enough indigenous scenes and elements incorporated to make Borobudur uniquely Indonesian. The monument is a shrine to the Lord Buddha and a place for Buddhist pilgrimage. The pilgrim journey begins at the base of the monument and follows a path around the monument, ascending to the top through three levels symbolic of Buddhist cosmology: Kāmadhātu (the world of desire), Rūpadhātu (the world of forms) and Arūpadhātu (the world of formlessness). The monument guides pilgrims through an extensive system of stairways and corridors with 1,460 narrative relief panels on the walls and the balustrades. Borobudur has one of the largest and most complete ensembles of Buddhist reliefs in the world.
+                        </p>
                 </div>
                 <div class="wishlist_div">
-                    <h3>Total expenses: Rp 1.400.000</h3>
+                    <h3>Total expenses: Rp 450.000</h3>
                     <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
                     <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
                 </div>
             </div>
             <div class="tujuan">
-                <div class="gambar flores">
+                <div class="gambar jogja-goa-pindul" >
                 </div>
                 <div class="deskripsi"> 
-                    <h3>Flores</h3>
-                    <p>Flores Flores Flores Flores Flores Flores FloresLorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vitae, placeat sed voluptates provident amet officia atque cum nobis doloribus hic sint illum quia asperiores porro suscipit? Magni ratione reprehenderit itaque a, tempora consequuntur officia, laboriosam repudiandae modi vitae deserunt molestiae iste officiis voluptate ipsa! Veritatis nihil voluptatibus nesciunt fugit!</p> 
+                    <h3>Goa Pindul</h3>
+                    <h4>Nature in Jogyakarta</h4>
+                    <p>Pindul Cave is a tourist attraction in the form of a cave located in Bejiharjo Village , Karangmojo District , Gunungkidul Regency . 
+                    </p>
+                    <p class="hidden">
+                        Pindul Cave is known for its way through the cave which is done by riding a float tire over an underground river flow in the cave, this activity is known as cave tubing.
+
+                        Underground river flow starts from the mouth of the cave until the end of the cave, inside the cave there is a narrow section that can only be passed by one buoy tire, so that usually tourists will take turns one by one to pass through this section. The length of Pindul Cave is 350 meters with a width of 5 meters and the distance between the surface of the water and the roof of the cave is 4 meters. The Pindul cave search takes approximately one hour which ends at a dam . The river that flows inside Pindul Cave originates from the Gedong Tujuh spring . The tourism object of Pindul Cave was inaugurated on 10 October 2010.
+                        </p>
                 </div>
                 <div class="wishlist_div">
-                    <h3>Total expenses: Rp 1.600.000</h3>
+                    <h3>Total expenses: Rp 350.000</h3>
                     <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
                     <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
                 </div>
-            </div> 
+            </div>
+            <div class="tujuan">
+                <div class="gambar jogja-kalibiru" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Kalibiru</h3>
+                    <h4>Nature in Jogyakarta</h4>
+                    <p>Kalibiru is a natural tourist attraction located in the district of Kulon Progo Regency, Yogyakarta Special Region.
+                    </p>
+                    <p class="hidden">
+                        This tourist spot has bumpy land and is dominant by hills in protected forest areas.
+
+                        Nature Tourism with the theme Kalibiru Community Forest is in the Hills of Menoreh Kulon Progo Yogyakarta, at an altitude of 450 meters above sea level. The forest is managed by people who are in the blood in order to maintain its sustainability, so that this forest can be used as a natural tourist attraction. 
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 400.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bandung-saung-udjo" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Saung Angklung Udjo</h3>
+                    <h4>Culture attraction in Bandung</h4>
+                    <p>Saung Angklung Udjo (SAU) is a venue for performances, bamboo handicraft centers, and bamboo musical instrument workshops . 
+                    </p>
+                    <p class="hidden">
+                        In addition, SAU has a goal as an educational laboratory and learning center for preserving Sundanese culture and specifically angklung .
+                        
+                        Founded in 1966 by Udjo Ngalagena and his wife Uum Sumiati, with a view to preserving and preserving traditional Sundanese art and culture. Located on Jalan Padasuka 118, East Bandung, West Java Indonesia .
+
+                        With a fresh atmosphere and surrounded by bamboo trees, from bamboo crafts and bamboo interiors to bamboo musical instruments.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 200.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bandung-gedung-merdeka" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Gedung Merdeka</h3>
+                    <h4>Museum attraction in Bandung</h4>
+                    <p>Merdeka Building (Indonesian: Gedung Merdeka) is an art-deco building in Jalan Asia-Afrika, Bandung, Indonesia. 
+                    </p>
+                    <p class="hidden">
+                        Today it serves as a museum displaying collections and photographs of the Asian–African Conference, the first Non-Aligned Movement that was held there in 1955.
+                        
+                        The present building was designed in 1926 in art deco style by Van Galen and C.P. Wolff Schoemaker, both professors at Technische Hogeschool (today ITB) and famous architects of that time. The 7500 m² building had Italian marble floors, some saloon and rooms in cikenhout wooden finishing, and was adorned with crystal lamps on the ceilings.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 300.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bandung-maribaya" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Lodge Maribaya</h3>
+                    <h4>Nature attraction in Bandung</h4>
+                    <p>Maribaya is located north of the city of Bandung. Exactly located east of Lembang. This area used to be famous for its hot springs. 
+                    </p>
+                    <p class="hidden">
+                        But now what is still famous is its nature which is still beautiful and blends with the Forest Park area of ​​Djuanda.
+
+                        To go here can be from the direction of the city of Bandung or can also from the direction of the city of Subang. I deliberately took the one from Subang city because I really wanted to go to Tangkuban Parahu. This pathway has indeed become an alternative route to Bandung and the views on both sides are pleasant to see.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 250.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bandung-floating-market" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Floating Market</h3>
+                    <h4>Culinary attraction in Bandung</h4>
+                    <p>Lembang is a district in West Bandung Regency , West Java , Indonesia . This sub-district is about 22 kilometers from the capital of West Bandung regency to the northeast via Cisarua . 
+                    </p>
+                    <p class="hidden">
+                        The center of government is in Lembang Village . Lembang District is the easternmost district and is famous as a tourist destination in West Java . 
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 450.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bandung-tangkuban-perahu" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Tangkuban Perahu</h3>
+                    <h4>Nature attraction in Bandung</h4>
+                    <p>Tangkuban Parahu is a stratovolcano 30 km north of the city of Bandung, the provincial capital of: West Java, Indonesia. 
+                    </p>
+                    <p class="hidden">
+                        It erupted in 1826, 1829, 1842, 1846, 1896, 1910, 1926, 1929, 1952, 1957, 1961, 1965, 1967, 1969, 1983, 2013 and 2019. 
+
+                        It is a popular tourist attraction where tourists hike or ride to the edge of the crater to view the hot water springs and boiling mud up close, and buy eggs cooked on the hot surface.[2] Together with Mount Burangrang and Bukit Tunggul, it is a remnant of the ancient Mount Sunda after the plinian eruption caused the Caldera to collapse.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 250.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bali-pura-tanahlot" >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Pura Tanahlot</h3>
+                    <h4>Culture attraction in Bali</h4>
+                    <p>Tanah Lot is a rock formation off the Indonesian island of Bali.
+                    </p>
+                    <p class="hidden">
+                        It is home to the ancient Hindu pilgrimage temple Pura Tanah Lot (literally "Tanah Lot temple"), a popular tourist and cultural icon for photography.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 500.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bali-pura-uluwatu " >
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Pura Uluwatu</h3>
+                    <h4>Culture attraction in Bali</h4>
+                    <p>Uluwatu Temple (Balinese: Pura (Luhur) Uluwatu) is a Balinese Hindu sea temple (Pura Segara) located in Uluwatu (South Kuta, Badung). 
+                    </p>
+                    <p class="hidden">
+                        The temple is regarded as one of the sad kahyangan and is dedicated to Sang Hyang Widhi Wasa in his manifestation as Rudra.
+
+                        A Kecak dance performance based on the Ramayana is performed daily in Uluwatu temple at every 6pm on the cliff-side. The performance which is outdoors also shows the beautiful sunset at the background of the performance.
+                        </p>
+                </div>
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 1.500.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bali-gwk">
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Garuda Wisnu Kencana</h3>
+                    <h4>Culture attraction in Bali</h4>
+                    <p>Garuda Wisnu Kencana Cultural Park (Indonesian: Taman Budaya Garuda Wisnu Kencana) or GWK, is a tourist destination and attraction located at Ungasan, Badung on the island of Bali, 
+                    </p>
+                    <p class="hidden">
+                        It is devoted to the Hindu god Vishnu, and his mount, Garuda, the mythical bird who became his companion. Owned and managed by Alam Sutera Realty, Tbk, the construction of the 120.9-metre statue of Vishnu riding his mount Garuda was completed in August 2018.[citation needed] The park has a land area of about 60 hectares and is 263 metres above sea level.
+                        </p>
+                </div>
+                
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 700.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bali-bedugul">
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Bedugul</h3>
+                    <h4>Nature attraction in Bali</h4>
+                    <p>Bedugul is a mountain lake resort area in Bali,[1] Indonesia, located in the centre-north region of the island near Lake Bratan on the road between Denpasar and Singaraja.
+                    </p>
+                    <p class="hidden">
+                        the area covers the villages of Bedugul itself, Candikuning, Pancasari, Pacung and Wanagiri amongst others. 
+
+                        Bedugul is located in the Tabanan Regency,[2] at 48 kilometres (30 mi) north of the city of Denpasar or 20 kilometres (12 mi) south from Singaraja city. In the area there is three crater lakes Lake Bratan, Lake Buyan, and Lake Tamblingan.
+                        </p>
+                </div>
+                
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 600.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="tujuan">
+                <div class="gambar bali-nusa-penida">
+                </div>
+                <div class="deskripsi"> 
+                    <h3>Nusa Penida</h3>
+                    <h4>Nature attraction in Bali</h4>
+                    <p>Nusa Penida is an island southeast of Indonesia's island Bali and a district of Klungkung Regency that includes the neighbouring small island of Nusa Lembongan.
+                    </p>
+                    <p class="hidden">
+                        The Badung Strait separates the island and Bali. The interior of Nusa Penida is hilly with a maximum altitude of 524 metres. It is drier than the nearby island of Bali. There is very little tourist infrastructure.
+
+                        There are two small islands nearby - Nusa Lembongan and Nusa Ceningan - which are included within the district (kecamatan). Administratively, the kecamatan of the same name, had a population of 45,178 in 2010 census, covering 202.8 km2, very little changed from 10 years prior.
+                        </p>
+                </div>
+                
+                <div class="wishlist_div">
+                    <h3>Total expenses: Rp 450.000</h3>
+                    <button class="butt see_more" onclick="see_more(this)" id="see_more">See More</button>
+                    <button class="butt wishlist" onclick="add_to_wishlist(this)">Add to Wishlist</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="white_layout display_none" id="white_layout">
@@ -109,6 +364,7 @@
             </div>
             <div class="deskripsi"> 
                 <h3>{{ dummy text }}</h3>
+                <h4>{{ dummy text }}</h4>
                 <p>{{ dummy description }}</p> 
             </div>
             <div class="wishlist_div">
@@ -117,6 +373,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
