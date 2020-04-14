@@ -58,6 +58,7 @@ function search(){
     displayAll()
     const kota = document.getElementById('select-city').value.toLowerCase()
     var counter = kategori.length - 1
+    console.log("initial counter ", counter)
     if (cari_kategori || kota){
         for (i=0; i < kategori.length; i++){
             let kat = kategori[i].innerHTML.toLowerCase()
@@ -68,7 +69,8 @@ function search(){
         }
     }
 
-    if (counter <= 0){
+    if (counter < 0){
         document.getElementsByClassName('found')[0].innerHTML = "destination not found"
     }
+    console.log("final counter", counter)
 }
