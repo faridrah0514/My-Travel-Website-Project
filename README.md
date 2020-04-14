@@ -24,13 +24,13 @@ Homepage dari aplikasi Travel Guide ini menunjukkan judul dan semua daftar desti
 
 **1. Landing Page**
 
-![Image](./readme/Landing_page.png)
+![Image](./readme/landing_page.PNG)
 
 **2. Lightbox**
 
 Setiap destinasi memiliki keterkaitan dengan Total Price yang dapat menghitung biaya dari setiap destinasi yang dipilih. Saat kamu memilih destinasi yang berbeda dengan menekan tombol “Add to Wishlist”, total biaya yang muncul akan bertambah sesuai dengan destinasi yang sudah dipilih
 
-![Image](./readme/Lightbox.png)
+![Image](./readme/lightbox.PNG)
 
 **3. Search box**
 
@@ -40,7 +40,7 @@ Search form tersebut memiliki text input yang dapat digunakan untuk langsung men
 
 selection box juga dapat memfilter berdasarkan kota
 
-![Image](./readme/searchbox.png)
+![Image](./readme/searchbox.PNG)
 
 **4. Total Price**
 
