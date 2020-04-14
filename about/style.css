@@ -101,9 +101,11 @@ a {
 }
 
 .photo{
-    background: url('https://images.unsplash.com/photo-1558203728-00f45181dd84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
-    background-size: 200%;
-    background-position: -90px -100px;
+    /* background: url('https://images.unsplash.com/photo-1558203728-00f45181dd84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80'); */
+    background: url('img/farid.jpeg');
+    /* background-size: canvas; */
+    background-size: cover;
+    /* background-position: 120px 0px; */
     background-repeat: no-repeat;
 }
 
